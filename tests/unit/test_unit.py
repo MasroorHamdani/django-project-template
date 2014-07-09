@@ -26,8 +26,8 @@ class SectionTestCase(TestCase):
 
     def test_status_for_all_task(self):
         resp = self.client.get('/all')
-        self.assertEqual(resp.status_code, 200, 'the task and user was not saved')
+        self.assertEqual(resp.status_code, 200, 'all task retrieving code is not correct')
 
     def test_status_for_particular_user(self):
         resp = self.client.get('/index/1')
-        self.assertEqual(resp.status_code, 200, 'the task and user was not saved')
+        self.assertEqual(resp.status_code, 200, 'task retrieval for particular user code not correct')
