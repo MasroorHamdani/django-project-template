@@ -20,14 +20,16 @@ class SectionTestCase(TestCase):
                         task_priority="public", user=userid)
 
     def test_task_are_saved(self):
-        userid = User.objects.get(username = "user1")
-        task = Task.objects.filter(user_id = userid)
+        userid = User.objects.get(username="user1")
+        task = Task.objects.filter(user_id=userid)
         self.assertEqual(len(task), 1, 'the task was not saved')
 
     def test_status_for_all_task(self):
         resp = self.client.get('/all')
-        self.assertEqual(resp.status_code, 200, 'all task retrieving code is not correct')
+        self.assertEqual(resp.status_code, 200,
+                         'all task retrieving code is not correct')
 
     def test_status_for_particular_user(self):
         resp = self.client.get('/index/1')
-        self.assertEqual(resp.status_code, 200, 'task retrieval for particular user code not correct')
+        self.assertEqual(resp.status_code, 200,
+                         'task retrieval for particular user code not correct')

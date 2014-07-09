@@ -12,7 +12,8 @@ def next_view(request, user_id):
 def user_task(user_id):
     task_data = Task.objects.filter(user_id=user_id)
     public_data = Task.objects.filter(task_priority=1).exclude(user_id=user_id)
-    data_dict = {"task_data": task_data, "public_data": public_data, "username": task_data[0].user.username}
+    data_dict = {"task_data": task_data, "public_data": public_data,
+                 "username": task_data[0].user.username}
     return data_dict
 
 
@@ -27,4 +28,3 @@ def get_task_data():
 
 def add_task(request):
     return render(request, "add_task.html")
-

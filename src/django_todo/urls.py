@@ -6,8 +6,8 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    url(r'^index/(?P<user_id>\w+)$',next_view),
-    url(r'^all$',all_task),
-    url(r'^addtask$',add_task),
+    url(r'^index/(?P<user_id>\w+)$', next_view),
+    url(r'^all$', all_task),
+    url(r'^addtask$', add_task),
     url(r'^admin/', include(admin.site.urls))
 )
