@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>All tasks</title>
+</head>
+<body>
+<h2>Welcome Admin</h2>
+<table border="1" width="50%">
+<tr><td>Task Name</td><td>Task Desc</td><td>Status</td>
+</tr>
+{% for task in task_data %}
+<tr><td>{{ task.task_name }}</td>
+<td>{{ task.task_desc }}</td>
+<td>{{ task.task_status }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

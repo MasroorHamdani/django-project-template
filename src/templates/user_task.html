@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Data for User</title>
+</head>
+<body>
+<h2>Welcome User</h2>
+<div align="center">
+	<table border="1" width="50%">
+	<tr><td>Task Name</td><td>Task Desc</td><td>Status</td>
+	</tr>
+	{% for task in task_data %}
+	<tr><td>{{ task.task_name }}</td>
+	<td>{{ task.task_desc }}</td>
+	<td>{{ task.task_status }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</div><br/>
+<div align="center">
+	Public Tasks
+	<table border="1" width="50%">
+	<tr><td>Task Name</td><td>Task Desc</td><td>Created By</td>
+	</tr>
+	{% for task in public_data %}
+	<tr><td>{{ task.task_name }}</td>
+	<td>{{ task.task_desc }}</td>
+	<td>{{ task.user.username }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</div>
+</body>
+</html>

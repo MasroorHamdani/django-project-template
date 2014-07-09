@@ -1,0 +1,16 @@
+CHANGES.rst
+HACKING.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+TODO.rst
+setup.cfg
+setup.py
+tox.ini
+archive/__init__.py
+archive/compat.py
+archive/test/test_archive.py
+python_archive.egg-info/PKG-INFO
+python_archive.egg-info/SOURCES.txt
+python_archive.egg-info/dependency_links.txt
+python_archive.egg-info/top_level.txt

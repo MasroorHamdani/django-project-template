@@ -1,0 +1,2 @@
+cd /home/hasher/project/django-project/django-project-template/out/docs
+make html

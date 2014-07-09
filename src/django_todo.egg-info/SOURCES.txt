@@ -1,0 +1,16 @@
+setup.py
+.ebextensions/custom_log.config
+.ebextensions/django_todo.config
+src/django_todo/__init__.py
+src/django_todo/dev_settings.py
+src/django_todo/settings.py
+src/django_todo/test_settings.py
+src/django_todo/urls.py
+src/django_todo.egg-info/PKG-INFO
+src/django_todo.egg-info/SOURCES.txt
+src/django_todo.egg-info/dependency_links.txt
+src/django_todo.egg-info/requires.txt
+src/django_todo.egg-info/top_level.txt
+src/static/css/styles.css
+src/static/js/app.js
+src/templates/README.txt
