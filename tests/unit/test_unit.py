@@ -1,7 +1,7 @@
 from django.test import TestCase
 from todoapp.models import Task
 from django.contrib.auth.models import User
-
+from todoapp.views import user_task, get_task_data
 
 #class TestAssertWorks(unittest.TestCase):
 #   def test_assert_equals(self):
@@ -33,3 +33,12 @@ class SectionTestCase(TestCase):
         resp = self.client.get('/index/1')
         self.assertEqual(resp.status_code, 200,
                          'task retrieval for particular user code not correct')
+
+    def test_three_data_sets_return(self):
+        user_id = User.objects.get(username="user1")
+        self.assertEqual((user_task(user_id.id)).__len__(), 3,
+                         "Data dictionary not complete, data missing")
+
+    def test_all_task_data_received(self):
+        self.assertEqual(get_task_data().__len__(), 1,
+                         "Data dictionary not received")
